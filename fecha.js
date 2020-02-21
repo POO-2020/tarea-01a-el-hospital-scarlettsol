@@ -1,4 +1,10 @@
 class Fecha {
+    /**
+     * 
+     * @param {number} dia 
+     * @param {number} mes 
+     * @param {number} año 
+     */
     constructor(dia, mes, año) {
         this.fecha = new Date(año, mes-1, dia);
         this.fecha2 = new Date(año, mes-1, dia);
@@ -7,7 +13,8 @@ class Fecha {
     }
 
     getAños() {
-        return (`${this.fecha.getFullYear} - ${this.fecha2.getFullYear}`);
+        let años = (this.fecha.getFullYear() - this.fecha2.getFullYear());
+        return (`${años}`);
     }
     getMeses() {
         let meses = años * 12;
