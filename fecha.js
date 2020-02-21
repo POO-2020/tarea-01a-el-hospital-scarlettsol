@@ -1,38 +1,39 @@
 class Fecha {
     /**
      * 
-     * @param {number} dia 
-     * @param {number} mes 
+     * @param {number} dia valor 1..31
+     * @param {number} mes valor 1..12
      * @param {number} año 
+     * @param {string} diaSemana qué día de la semana era
      */
-    constructor(dia, mes, año) {
+    constructor(dia, mes, año, diaSemana) {
         this.fecha = new Date(año, mes-1, dia);
-        this.fecha2 = new Date(año, mes-1, dia);
-        this.DiaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-        this.mesNombre = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        this.fecha2 = new Date;
+        this.diaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
     }
 
     getAños() {
-        let años = (this.fecha.getFullYear() - this.fecha2.getFullYear());
+        let años = this.fecha2.getUTCFullYear() - this.fecha.getFullYear();
         return (`${años}`);
     }
     getMeses() {
-        let meses = años * 12;
+        let meses = this.getAños() * 12;
         return (`${meses}`);
     }
     getSemanas() {
-        let semanas = meses * 4;
+        let semanas = this.getMeses() * 4;
         return (`${semanas}`);
     }
     getDias() {
-        let dias = semanas * 7;
+        let dias = this.getSemanas() * 7;
         return (`${dias}`);
     }
     getFecha() {
-        return(`${this.fechaNacimiento.getDate()}/${this.fechaNacimiento.getMonth()+1}/${this.fechaNacimiento.getFullYear()}`);
+        return(`${this.fecha.getDate()}/${this.fecha.getMonth()+1}/${this.fecha.getFullYear()}`);
     }
     getDiaFecha() {
-        let dia = this.DiaSemana[this.fecha.getDay()];
+        let dia = this.diaSemana[this.fecha.getDay()];
+        return(`${dia}`);
     }
 }
 
