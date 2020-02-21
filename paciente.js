@@ -11,7 +11,7 @@ class Paciente {
         this.telefono = telefono;
     }
 
-    getFechaNacimiento(){
+    getFechaNacimiento() {
         return(`${this.fechaNacimiento.getDate()}/${this.fechaNacimiento.getMonth()+1}/${this.fechaNacimiento.getFullYear()}`);
     }
 
@@ -22,4 +22,5 @@ class Paciente {
     }
 }
 
-let
+let p1 = new Paciente("Marian Ramírez", new fechaNacimiento(2000, 11, 27), 3131590469);
+console.log(p1.getPerfil());
