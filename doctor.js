@@ -1,9 +1,9 @@
-import Nombre from "./nombre.js/index.js";
+import Nombre from "./nombre.js";
 
-class Doctor {
+export default class Doctor {
     /**
      * 
-     * @param {string} nombre Nombre del doctor
+     * @param {Nombre} nombre Nombre del doctor
      * @param {string} especialidad En qué se especiliza
      * @param {number} telefono Contacto del doctor
      * @param {number} cedula Cédula del médico
