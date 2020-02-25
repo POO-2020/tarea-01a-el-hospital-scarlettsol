@@ -19,6 +19,3 @@ export default class Doctor {
         return(`Nombre: ${this.nombre}, Especialidad: ${this.especialidad}, Tel. ${this.telefono}, Cédula: ${this.cedula}`);
     }
 }
-
-let doc1 = new Doctor("Marian Ramírez Solórzano", "Neurología", 3131590469, 5269489);
-console.log(doc1.getPerfil());
