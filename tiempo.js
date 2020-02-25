@@ -22,7 +22,3 @@ export default class Tiempo {
         return(`${this.hora}:${this.minutos}`);
     }
 }
-
-let t1 = new Tiempo(9, 40, 'PM');
-console.log(t1.getFormato12());
-console.log(t1.getFormato24());
