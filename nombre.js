@@ -1,4 +1,4 @@
-class Nombre {
+export default class Nombre {
     /**
      * 
      * @param {string} nombre Nombre de la persona
@@ -26,8 +26,3 @@ class Nombre {
         return(`${this.nombre.charAt(0)}.${this.apellidoPaterno.charAt(0)}.${this.apellidoMaterno.charAt(0)}`);
     }
 }
-
-let n1 = new Nombre("Marian", "Ramírez", "Solórzano");
-console.log(n1.getNombreCompleto());
-console.log(n1.getApellidoNombre());
-console.log(n1.getIniciales());
