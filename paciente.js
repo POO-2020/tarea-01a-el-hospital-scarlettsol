@@ -1,9 +1,10 @@
+import Nombre from "./nombre.js";
 import Fecha from "./fecha.js";
 
-class Paciente {
+export default class Paciente {
     /**
      * 
-     * @param {string} nombre 
+     * @param {Nombre} nombre 
      * @param {Fecha} fechaNacimiento 
      * @param {number} telefono 
      */
@@ -14,11 +15,8 @@ class Paciente {
     }
 
     getPerfil() {
-        return (`        Nombre: ${this.nombre}
-        Fecha de nacimiento: ${this.fechaNacimiento.getFechaa()}
+        return (`        Nombre: ${this.nombre.getNombreCompleto()}
+        Fecha de nacimiento: ${this.fechaNacimiento.getFecha()}
         Tel.: ${this.telefono}`);
     }
 }
-
-let p1 = new Paciente("Marian Ramírez", new Fecha(27, 11, 2000), 3131590469);
-console.log(p1.getPerfil());
