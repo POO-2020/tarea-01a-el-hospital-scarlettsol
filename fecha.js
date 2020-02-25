@@ -1,4 +1,4 @@
-class Fecha {
+export default class Fecha {
     /**
      * 
      * @param {number} dia valor 1..31
@@ -36,11 +36,3 @@ class Fecha {
         return(`${dia}`);
     }
 }
-
-let f1 = new Fecha(27,11,2000);
-console.log(f1.getAños());
-console.log(f1.getMeses());
-console.log(f1.getSemanas());
-console.log(f1.getDias());
-console.log(f1.getFecha());
-console.log(f1.getDiaFecha());
